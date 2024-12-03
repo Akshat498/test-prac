@@ -1,0 +1,155 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* .no-scroll {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+} */
+
+.ul-parent-small-screen {
+    display: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+section.hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(/assets/image/Rectangle\ 3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0082e6;
+    /* height: 80px; */
+    width: 100%;
+}
+
+label.logo {
+    padding: 0 100px;
+}
+
+/* nav ul {
+    float: right;
+    margin-right: 20px;
+} */
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 22px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    label.logo {
+        padding-left: 30px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Responsive media query code for small screen */
+@media (max-width: 890px) {
+    .large-screen-ul {
+        display: none;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    label.logo {
+        font-size: 22px;
+    }
+
+    .ul-parent-small-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100% - 80px);
+        background: #2c3e50;
+        position: fixed;
+        /* top: 0; */
+        bottom: 0;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~.ul-parent-small-screen {
+        left: 0;
+    }
+}
